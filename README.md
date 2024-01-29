@@ -1,32 +1,49 @@
-# CsvAuditor
+## Welcome to CSV Auditor
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/csv_auditor`. To experiment with that code, run `bin/console` for an interactive prompt.
+Define rules to audit your CSV files — and the pacman will do the job.
 
-TODO: Delete this and the text above, and describe your gem
+```sh
+Time: 00:00:02 (3/10)              ᗧ･･･････････････････････････････ 30% Progress
+```
 
-## Installation
+## Getting Started
 
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add csv_auditor
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install csv_auditor
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```sh
+$ exe/audit --file examples/complete_example/audit.csv --output examples/complete_example/audited.csv --config examples/complete_example/.csv_auditor.yml
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/csv_auditor. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/csv_auditor/blob/master/CODE_OF_CONDUCT.md).
+I :heart: Open source!
+
+##### Clone
+
+```
+$ git clone git@github.com:vgsantoniazzi/csv_auditor.git
+```
+
+##### Setup
+
+```
+$ bin/setup
+```
+
+##### execute
+
+```
+$ exe/autit
+
+Usage: audit [options]
+    -f, --file file.csv              File to audit (required)
+    -o, --output audited.csv         File to output to (default: audited.csv)
+    -c, --config .csv_auditor.csv    Configuration file (default: .csv_auditor.yml)
+```
+
+[Follow github guides for forking a project](https://guides.github.com/activities/forking/)
+
+[Follow github guides for contributing open source](https://guides.github.com/activities/contributing-to-open-source/#contributing)
+
+[Squash pull request into a single commit](http://eli.thegreenplace.net/2014/02/19/squashing-github-pull-requests-into-a-single-commit/)
 
 ## License
 
@@ -34,4 +51,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the CsvAuditor project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/csv_auditor/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the CsvAuditor project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/vgsantoniazzi/csv_auditor/blob/master/CODE_OF_CONDUCT.md).
