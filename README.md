@@ -16,6 +16,12 @@ $ exe/audit --file examples/complete_example/audit.csv --output examples/complet
 
 I :heart: Open source!
 
+[Follow github guides for forking a project](https://guides.github.com/activities/forking/)
+
+[Follow github guides for contributing open source](https://guides.github.com/activities/contributing-to-open-source/#contributing)
+
+[Squash pull request into a single commit](http://eli.thegreenplace.net/2014/02/19/squashing-github-pull-requests-into-a-single-commit/)
+
 ##### Clone
 
 ```
@@ -38,12 +44,6 @@ Usage: audit [options]
     -o, --output audited.csv         File to output to (default: audited.csv)
     -c, --config .csv_auditor.csv    Configuration file (default: .csv_auditor.yml)
 ```
-
-[Follow github guides for forking a project](https://guides.github.com/activities/forking/)
-
-[Follow github guides for contributing open source](https://guides.github.com/activities/contributing-to-open-source/#contributing)
-
-[Squash pull request into a single commit](http://eli.thegreenplace.net/2014/02/19/squashing-github-pull-requests-into-a-single-commit/)
 
 ## License
 
