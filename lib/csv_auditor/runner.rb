@@ -25,7 +25,6 @@ module CsvAuditor
         processed_rows << row
 
         progress_bar.increment
-        sleep 0.3
       end
 
       progress_bar.finish
