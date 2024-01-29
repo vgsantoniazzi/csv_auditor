@@ -1,0 +1,31 @@
+AllCops:
+  TargetRubyVersion: 2.5
+
+Layout/LineLength:
+  Max: 120
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+
+Metrics/ParameterLists:
+  Max: 7
+
+Metrics/AbcSize:
+  Exclude: ['lib/csv_auditor/validator/**/*']
+
+Lint/DuplicateMethods:
+  Enabled: false
+
+Lint/UnusedMethodArgument:
+  Exclude: ['lib/csv_auditor/validator/**/*', 'examples/**/*']

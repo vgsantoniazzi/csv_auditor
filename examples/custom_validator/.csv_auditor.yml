@@ -1,0 +1,6 @@
+---
+validations:
+  - name: "cpf"
+    validation: cpf
+    columns:
+      - brcpf

@@ -1,0 +1,31 @@
+---
+validations:
+  - name: "exacly_the_same_person"
+    validation: uniqueness
+    columns:
+      - name
+      - email
+
+  - name: "duplicated_email"
+    validation: uniqueness
+    columns:
+      - email
+
+  - name: "invalid_email"
+    validation: format
+    columns:
+      - email
+    options:
+      regex: \A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z
+
+  - name: "invalid_amount"
+    validation: numericality
+    columns:
+      - amount_usd
+    options:
+      greater_than: 0
+
+  - name: "invalid_routing_number"
+    validation: routing_number
+    columns:
+      - routing_number
