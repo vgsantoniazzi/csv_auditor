@@ -18,6 +18,13 @@ validations:
     options:
       strip: true
 
+  - name: "invalid_phone_number_error"
+    validation: format
+    columns:
+      - phone_number
+    options:
+      regex: \d{9}$
+
   - name: "invalid_amount"
     validation: numericality
     columns:
