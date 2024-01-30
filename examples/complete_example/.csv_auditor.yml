@@ -36,3 +36,5 @@ validations:
     validation: routing_number
     columns:
       - routing_number
+    options:
+      padding: true

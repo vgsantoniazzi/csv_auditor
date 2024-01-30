@@ -4,9 +4,12 @@ module CsvAuditor
       def self.validate(row:, fields:, name:, processed_rows:, options: {})
         raise ArgumentError, "only allowed one field validation for routing_number" if fields.length > 1
 
-        return if routing_number_valid?(row[fields.first])
+        routing_number = row[fields.first]
+        routing_number = routing_number&.rjust(9, "0") if options["padding"]
 
-        row[name] = "#{fields.first}: #{row[fields.first]} is not a valid routing number"
+        return if routing_number_valid?(routing_number)
+
+        row[name] = "#{fields.first}: #{routing_number} is not a valid routing number"
       end
 
       def self.routing_number_valid?(routing_number)
