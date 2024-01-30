@@ -11,12 +11,12 @@ validations:
     columns:
       - email
 
-  - name: "invalid_email"
-    validation: format
+  - name: "invalid_email_error"
+    validation: email
     columns:
       - email
     options:
-      regex: \A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z
+      strip: true
 
   - name: "invalid_amount"
     validation: numericality
