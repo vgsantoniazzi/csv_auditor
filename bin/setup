@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
+#
+# Bundle install will do the job. The required gems are in the `.gemspec` file,
+# and it does not require too many libraries to run.
+#
 set -euo pipefail
 IFS=$'\n\t'
 set -vx
 
 bundle install
-
-# Do any other automated setup that you need to do here

@@ -1,5 +1,11 @@
 #!/usr/bin/env ruby
-
+#
+# The CLI for this gem is the fastest way to execute the program. Although it can
+# be executed outside the CLI, configuring it may require some hacking.
+#
+# The idea is to require just one parameter to execute: `--file`. The configuration
+# file and output are pre-defined, and we can run the auditor.
+#
 require "bundler/setup"
 require "csv_auditor"
 
