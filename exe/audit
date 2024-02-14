@@ -3,29 +3,23 @@
 require "bundler/setup"
 require "csv_auditor"
 
-options = {
-  output: "audited.csv",
-  config: ".csv_auditor.yml"
-}
+options = {}
 
 option_parser = OptionParser.new do |opts|
   opts.banner = "Usage: audit [options]"
 
-  opts.on "-f", "--file file.csv", "File to audit (required)"
-  opts.on "-o", "--output audited.csv", "File to output to (default: audited.csv)"
-  opts.on "-c", "--config .csv_auditor.csv", "Configuration file (default: .csv_auditor.yml)"
+  opts.on "-c", "--config .csv_auditor.csv", "Configuration file path"
 end
 
 option_parser.parse!(into: options)
 
-if options[:file].nil?
+if options[:config].nil?
   puts option_parser.help
   exit 1
 end
 
 CsvAuditor.configure do |config|
-  config.output = options[:output]
   config.config_file_path = options[:config]
 end
 
-CsvAuditor.run(options[:file])
+CsvAuditor.run

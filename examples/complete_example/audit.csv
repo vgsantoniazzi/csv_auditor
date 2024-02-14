@@ -1,10 +1,10 @@
-name,email,amount_usd,routing_number
-Athena D. Matthews,athena@gmail.com,1000,211371926
-Jason P. Tate,jason@gmail.org,504.69,211371926
-Curtis G. Zook,custis@yahoo.com,504.69,1111
-Mary D. Sanchez,mary@gmail.com,504.69,211371926
-Brent S. Perry,brent@gmail.com,504.69,211371926
-Robert K. Fellows,roberts@gmail.net,504.69,211371926
-Athena D. Matthews,athena@gmail.com,504.69,211371926
-Athena D. Matthews,athena@gmail.com,0,211371926
-Athena D. Matthews,invalid_email@,0,211371926
+name,email,amount_usd,phone_number,routing_number
+Athena D. Matthews,athena@gmail.com,1000,201303303,211371926
+Jason P. Tate,jason@gmail.org,504.69,201303304,211371926
+Curtis G. Zook,custis@yahoo.com,504.69,201303303,1111
+Mary D. Sanchez,mary@gmail.com,504.69,20130330a,211371926
+Brent S. Perry,brent@gmail.com,504.69,201303303,211371926
+Robert K. Fellows,roberts@gmail.net,504.69,201303303,211371926
+Athena D. Matthews,athena@gmail.com,504.69,201303303,211371926
+Athena D. Matthews,athena@gmail.com,0,201303303,211371926
+Athena D. Matthews,invalid_email@,0,201303303,211371926
