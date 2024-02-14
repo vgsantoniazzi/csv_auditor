@@ -1,13 +1,13 @@
 module CsvAuditor
   class Runner
-    def self.run(csv_file)
-      new(csv_file).run
+    def self.run(execution)
+      new(execution).run
     end
 
-    attr_accessor :csv_file, :processed_rows, :progress_bar
+    attr_accessor :execution, :processed_rows, :progress_bar
 
-    def initialize(csv_file)
-      @csv_file = csv_file
+    def initialize(execution)
+      @execution = execution
       @processed_rows = []
       @progress_bar = ProgressBar.create(
         format: "%a (%c/%C) %b\u{15E7}%i %p%% %t",
@@ -19,7 +19,7 @@ module CsvAuditor
     end
 
     def run
-      CSV.foreach(csv_file, headers: true) do |row|
+      CSV.foreach(execution["file"], headers: true) do |row|
         execute_validations!(row)
 
         processed_rows << row
@@ -35,7 +35,7 @@ module CsvAuditor
     private
 
     def execute_validations!(row)
-      config.validations.each do |validation|
+      execution["validations"].each do |validation|
         validator(validation["validation"]).validate(
           name: validation["name"],
           row: row,
@@ -49,7 +49,7 @@ module CsvAuditor
     def save_results!
       headers = processed_rows.map(&:headers).flatten.uniq
 
-      CSV.open(config.output, "w") do |csv|
+      CSV.open(execution["output"], "w") do |csv|
         csv << headers
         processed_rows.each do |row|
           csv << row.fields(*headers)
@@ -58,15 +58,11 @@ module CsvAuditor
     end
 
     def total_rows
-      @total_rows ||= CSV.read(csv_file).count
-    end
-
-    def config
-      @config ||= CsvAuditor.configuration
+      @total_rows ||= CSV.read(execution["file"]).count
     end
 
     def validator(name)
-      config.validators.validators[name]
+      CsvAuditor.configuration.validators.validators[name]
     end
   end
 end

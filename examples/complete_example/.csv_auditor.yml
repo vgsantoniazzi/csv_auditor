@@ -1,40 +1,43 @@
 ---
-validations:
-  - name: "exacly_the_same_person"
-    validation: uniqueness
-    columns:
-      - name
-      - email
+- name: "complete validation"
+  file: "examples/complete_example/audit.csv"
+  output: "examples/complete_example/audited.csv"
+  validations:
+    - name: "exacly_the_same_person"
+      validation: uniqueness
+      columns:
+        - name
+        - email
 
-  - name: "duplicated_email"
-    validation: uniqueness
-    columns:
-      - email
+    - name: "duplicated_email"
+      validation: uniqueness
+      columns:
+        - email
 
-  - name: "invalid_email_error"
-    validation: email
-    columns:
-      - email
-    options:
-      strip: true
+    - name: "invalid_email_error"
+      validation: email
+      columns:
+        - email
+      options:
+        strip: true
 
-  - name: "invalid_phone_number_error"
-    validation: format
-    columns:
-      - phone_number
-    options:
-      regex: \d{9}$
+    - name: "invalid_phone_number_error"
+      validation: format
+      columns:
+        - phone_number
+      options:
+        regex: \d{9}$
 
-  - name: "invalid_amount"
-    validation: numericality
-    columns:
-      - amount_usd
-    options:
-      greater_than: 0
+    - name: "invalid_amount"
+      validation: numericality
+      columns:
+        - amount_usd
+      options:
+        greater_than: 0
 
-  - name: "invalid_routing_number"
-    validation: routing_number
-    columns:
-      - routing_number
-    options:
-      padding: true
+    - name: "invalid_routing_number"
+      validation: routing_number
+      columns:
+        - routing_number
+      options:
+        padding: true

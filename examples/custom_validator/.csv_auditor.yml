@@ -1,6 +1,9 @@
 ---
-validations:
-  - name: "cpf"
-    validation: cpf
-    columns:
-      - brcpf
+- name: "custom validation"
+  file: "audit.csv"
+  output: "audited.csv"
+  validations:
+    - name: "cpf_invalid_error"
+      validation: cpf
+      columns:
+        - brcpf

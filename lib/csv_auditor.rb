@@ -9,7 +9,9 @@ require "csv_auditor/configuration"
 require "csv_auditor/runner"
 
 module CsvAuditor
-  def self.run(csv_file)
-    CsvAuditor::Runner.run(csv_file)
+  def self.run
+    CsvAuditor.configuration.executions.each do |execution|
+      CsvAuditor::Runner.run(execution)
+    end
   end
 end
