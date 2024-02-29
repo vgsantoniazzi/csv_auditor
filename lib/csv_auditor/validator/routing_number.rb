@@ -1,7 +1,7 @@
 module CsvAuditor
   class Validator
     class RoutingNumber
-      def self.validate(row:, fields:, name:, processed_rows:, options: {})
+      def self.validate(row:, fields:, name:, instance_hash:, options: {})
         raise ArgumentError, "only allowed one field validation for routing_number" if fields.length > 1
 
         routing_number = row[fields.first]
