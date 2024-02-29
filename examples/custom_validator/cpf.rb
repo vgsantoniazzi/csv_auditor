@@ -1,5 +1,5 @@
 class Cpf
-  def self.validate(row:, fields:, name:, processed_rows:, options: {})
+  def self.validate(row:, fields:, name:, instance_hash:, options: {})
     fields.each do |field|
       cpf = row[field]
       row[name] = "#{field}: #{cpf} is not a valid CPF" unless cpf_valid?(cpf)

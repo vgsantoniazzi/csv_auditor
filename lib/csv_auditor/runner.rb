@@ -4,11 +4,12 @@ module CsvAuditor
       new(execution).run
     end
 
-    attr_accessor :execution, :processed_rows, :progress_bar
+    attr_accessor :execution, :processed_rows, :instance_hash, :progress_bar
 
     def initialize(execution)
       @execution = execution
       @processed_rows = []
+      @instance_hash = {}
       @progress_bar = ProgressBar.create(
         format: "%a (%c/%C) %b\u{15E7}%i %p%% %t",
         progress_mark: " ",
@@ -39,7 +40,7 @@ module CsvAuditor
         validator(validation["validation"]).validate(
           name: validation["name"],
           row: row,
-          processed_rows: processed_rows,
+          instance_hash: instance_hash,
           fields: validation["columns"],
           options: validation["options"]
         )

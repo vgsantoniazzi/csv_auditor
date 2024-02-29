@@ -1,6 +1,7 @@
 require "csv"
 require "yaml"
 require "json"
+require "digest"
 require "ruby-progressbar"
 require "optparse"
 require "csv_auditor/version"

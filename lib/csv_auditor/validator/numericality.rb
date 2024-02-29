@@ -1,7 +1,7 @@
 module CsvAuditor
   class Validator
     class Numericality
-      def self.validate(row:, fields:, name:, processed_rows:, options: {})
+      def self.validate(row:, fields:, name:, instance_hash:, options: {})
         raise ArgumentError, "only allowed one field validation for numericality" if fields.length > 1
 
         unless float?(row[fields.first])

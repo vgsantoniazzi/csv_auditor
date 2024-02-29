@@ -5,6 +5,6 @@ Curtis G. Zook,custis@yahoo.com,504.69,201303303,1111,routing_number: 000001111 
 Mary D. Sanchez,mary@gmail.com,504.69,20130330a,211371926,,phone_number: 20130330a does not match regex \d{9}$,,,,
 Brent S. Perry,brent@gmail.com,504.69,201303303,211371926,,,,,,
 Robert K. Fellows,roberts@gmail.net,504.69,201303303,211371926,,,,,,
-Athena D. Matthews,athena@gmail.com,504.69,201303303,211371926,,,"name, email: is not unique (duplicate found: row 2)",email: is not unique (duplicate found: row 2),,
-Athena D. Matthews,athena@gmail.com,0,201303303,211371926,,,"name, email: is not unique (duplicate found: row 2)",email: is not unique (duplicate found: row 2),amount_usd: 0 is not greater than 0,
+Athena D. Matthews,athena@gmail.com,504.69,201303303,211371926,,,"name, email: is not unique",email: is not unique,,
+Athena D. Matthews,athena@gmail.com,0,201303303,211371926,,,"name, email: is not unique",email: is not unique,amount_usd: 0 is not greater than 0,
 Athena D. Matthews,invalid_email@,0,201303303,211371926,,,,,amount_usd: 0 is not greater than 0,"email: invalid_email@ does not match regex (?-mix:\A[a-zA-Z0-9.!\#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*\z)"
